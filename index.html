@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="description" content="primera webAPP">
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
+    <meta http-equiv ="X-UA-Compatible" content ="ie=edge">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <title>CONVERSOR DE MONEDAS</title>
+    <link rel="manifest" href="./manifest.json">
+
+    </head>
+    
+    <body>
+    <form name="convertidor">
+<h2>Convertidor</h2>
+
+<label>Precio del Dolar : 700 pesos</label>
+<hr>
+<label>Pesos : </label><input type="text" name="pesos">
+<label>Dolares : </label><input type="text" name="dolar">
+<input type="button" value="convertir" onclick="calcular();">
+    </form>
+</body>
+
+
+<script type="text/javascript">
+function calcular(){
+    var pes = (document.convertidor.pesos.value)*1;
+
+    if(pes == 0){
+        alert("");
+    }
+    var tot = pes / 700;
+    tot  = tot.toFixed(2);
+
+    document.convertidor.dolar.value = tot;
+}
+
+</script>
+
+<script src="./script.js"></script>
+</html>
